@@ -5,7 +5,8 @@ npm install e53e04ac/ipp5-adlibitum-client
 ~~~~~
 
 ~~~~~ mjs
-import { Ipp5AdlibitumClient } from 'e53e04ac/ipp5-adlibitum-client';
+import { type Ipp5AdlibitumClient<U> } from 'e53e04ac/ipp5-adlibitum-client';
+import { const Ipp5AdlibitumClient } from 'e53e04ac/ipp5-adlibitum-client';
 ~~~~~
 
 ~~~~~ mermaid
@@ -30,8 +31,8 @@ graph RL;
   A ----> B_5;
   A ----> B_6;
   click B_0 "https://www.npmjs.org/package/axios/v/1.3.2";
-  click B_1 "https://github.com/e53e04ac/event-emitter/tree/0c338d821268a5f0aaa42481216fd2e73c8734c9";
-  click B_2 "https://github.com/e53e04ac/hold/tree/285d028e225a7e75747417c3ed6b1ca0d5f52f6a";
+  click B_1 "https://github.com/e53e04ac/event-emitter/tree/16e99ba8e6c11d40465eacae307459cc95a57625";
+  click B_2 "https://github.com/e53e04ac/hold/tree/8fc3f6696d1c7ed6d184d90c5e33298cc9228991";
   click B_3 "https://www.npmjs.org/package/jsonwebtoken/v/9.0.0";
   click B_4 "https://www.npmjs.org/package/@types/express/v/4.17.17";
   click B_5 "https://www.npmjs.org/package/@types/jsonwebtoken/v/9.0.1";
@@ -39,57 +40,67 @@ graph RL;
 ~~~~~
 
 ~~~~~ mermaid
-graph LR;
-  A(["index.mjs"])
+graph RL;
+  subgraph "e53e04ac/ipp5-adlibitum-client";
+    E_0(["Ipp5AdlibitumClient"]);
+  end;
+  M(["index.mjs"])
   subgraph "node:crypto";
-    B_0_0(["createHash"]);
-    B_0_1(["randomUUID"]);
+    I_0_0(["createHash"]);
+    I_0_1(["randomUUID"]);
   end;
   subgraph "axios";
-    B_1_0(["Axios"]);
+    I_1_0(["Axios"]);
   end;
   subgraph "jsonwebtoken";
-    B_2_0(["default"]);
+    I_2_0(["default"]);
   end;
   subgraph "event-emitter";
-    B_3_0(["EventEmitter"]);
+    I_3_0(["EventEmitter"]);
   end;
   subgraph "hold";
-    B_4_0(["hold"]);
-    B_4_1(["unwrap"]);
+    I_4_0(["hold"]);
+    I_4_1(["unwrap"]);
   end;
-  B_0_0 ----> A;
-  B_0_1 ----> A;
-  B_1_0 ----> A;
-  B_2_0 ----> A;
-  B_3_0 ----> A;
-  B_4_0 ----> A;
-  B_4_1 ----> A;
+  M ----> I_0_0;
+  M ----> I_0_1;
+  M ----> I_1_0;
+  M ----> I_2_0;
+  M ----> I_3_0;
+  M ----> I_4_0;
+  M ----> I_4_1;
+  E_0 ----> M;
 ~~~~~
 
 ~~~~~ mermaid
-graph LR;
-  A(["index.d.ts"])
+graph RL;
+  subgraph "e53e04ac/ipp5-adlibitum-client";
+    E_0(["type Ipp5AdlibitumClient<U>"]);
+    E_1(["const Ipp5AdlibitumClient"]);
+  end;
+  M(["index.d.ts"])
   subgraph "axios";
-    B_0_0(["Axios"]);
+    I_0_0(["Axios"]);
   end;
   subgraph "express";
-    B_1_0(["Request"]);
-    B_1_1(["Response"]);
-    B_1_2(["NextFunction"]);
+    I_1_0(["Request"]);
+    I_1_1(["Response"]);
+    I_1_2(["NextFunction"]);
   end;
   subgraph "event-emitter";
-    B_2_0(["EventEmitter"]);
+    I_2_0(["EventEmitter"]);
   end;
   subgraph "hold";
-    B_3_0(["Get"]);
-    B_3_1(["ValueOrGet"]);
+    I_3_0(["Get"]);
+    I_3_1(["ValueOrGet"]);
   end;
-  B_0_0 ----> A;
-  B_1_0 ----> A;
-  B_1_1 ----> A;
-  B_1_2 ----> A;
-  B_2_0 ----> A;
-  B_3_0 ----> A;
-  B_3_1 ----> A;
+  M ----> I_0_0;
+  M ----> I_1_0;
+  M ----> I_1_1;
+  M ----> I_1_2;
+  M ----> I_2_0;
+  M ----> I_3_0;
+  M ----> I_3_1;
+  E_0 ----> M;
+  E_1 ----> M;
 ~~~~~

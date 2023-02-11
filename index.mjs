@@ -180,7 +180,7 @@ const constructor = ((options) => {
 /** @type {import('.').Ipp5AdlibitumClient.Companion} */
 const companion = ({});
 
-/** @type {import('.').Ipp5AdlibitumClient.Companion} */
+/** @type {import('.').Ipp5AdlibitumClient.ConstructorWithCompanion} */
 const constructorWithCompanion = Object.assign(constructor, companion);
 
 export { constructorWithCompanion as Ipp5AdlibitumClient };

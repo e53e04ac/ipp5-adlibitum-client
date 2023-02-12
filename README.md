@@ -5,7 +5,6 @@ npm install e53e04ac/ipp5-adlibitum-client
 ~~~~~
 
 ~~~~~ mjs
-import { Ipp5AdlibitumClient<U> } from 'e53e04ac/ipp5-adlibitum-client';
 import { Ipp5AdlibitumClient } from 'e53e04ac/ipp5-adlibitum-client';
 ~~~~~
 
@@ -31,8 +30,8 @@ graph RL;
   A ----> B_5;
   A ----> B_6;
   click B_0 "https://www.npmjs.org/package/axios/v/1.3.2";
-  click B_1 "https://github.com/e53e04ac/event-emitter/tree/684f3b21090807e48917ae6591611f4eb2b1e661";
-  click B_2 "https://github.com/e53e04ac/hold/tree/67e5b60f9bb3221f8b200107c13e89a604a93631";
+  click B_1 "https://github.com/e53e04ac/event-emitter/tree/58fd3772aa6977c80111d1af5425c38551c0da3e";
+  click B_2 "https://github.com/e53e04ac/hold/tree/5dd6f94b8ecd94f98219a7afae52320676380c27";
   click B_3 "https://www.npmjs.org/package/jsonwebtoken/v/9.0.0";
   click B_4 "https://www.npmjs.org/package/@types/express/v/4.17.17";
   click B_5 "https://www.npmjs.org/package/@types/jsonwebtoken/v/9.0.1";
@@ -75,8 +74,8 @@ graph RL;
 ~~~~~ mermaid
 graph RL;
   subgraph "e53e04ac/ipp5-adlibitum-client";
-    E_0(["Ipp5AdlibitumClient<U>"]);
-    E_1(["Ipp5AdlibitumClient"]);
+    E_0(["type Ipp5AdlibitumClient<U>"]);
+    E_1(["const Ipp5AdlibitumClient"]);
   end;
   M(["index.d.ts"])
   subgraph "axios";

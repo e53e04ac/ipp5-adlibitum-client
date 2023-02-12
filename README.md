@@ -30,7 +30,7 @@ graph RL;
   A ----> B_5;
   A ----> B_6;
   click B_0 "https://www.npmjs.org/package/axios/v/1.3.2";
-  click B_1 "https://github.com/e53e04ac/event-emitter/tree/b3a7678f84ede6ae2111a8802360b326a57d3ef2";
+  click B_1 "https://github.com/e53e04ac/event-emitter/tree/93b9f205a7be92bb920d2d4f13efa78be7b4ba5d";
   click B_2 "https://github.com/e53e04ac/hold/tree/b0b5ef032800af76c6e7ae27472dbf25a04a947d";
   click B_3 "https://www.npmjs.org/package/jsonwebtoken/v/9.0.0";
   click B_4 "https://www.npmjs.org/package/@types/express/v/4.17.17";
@@ -74,8 +74,9 @@ graph RL;
 ~~~~~ mermaid
 graph RL;
   subgraph "e53e04ac/ipp5-adlibitum-client";
-    E_0(["type Ipp5AdlibitumClient<U>"]);
-    E_1(["const Ipp5AdlibitumClient"]);
+    E_0(["namespace Ipp5AdlibitumClient"]);
+    E_1(["type Ipp5AdlibitumClient<U>"]);
+    E_2(["const Ipp5AdlibitumClient"]);
   end;
   M(["index.d.ts"])
   subgraph "axios";
@@ -102,4 +103,5 @@ graph RL;
   M ----> I_3_1;
   E_0 ----> M;
   E_1 ----> M;
+  E_2 ----> M;
 ~~~~~

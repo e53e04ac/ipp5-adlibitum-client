@@ -15,8 +15,6 @@ import { ValueOrGet } from 'hold';
 
 export declare namespace Ipp5AdlibitumClient {
 
-    type EventSpecs = Record<never, never>;
-
     type HttpRequestData = {
         readonly method: string;
         readonly url: string;
@@ -64,6 +62,8 @@ export declare namespace Ipp5AdlibitumClient {
             readonly U: U;
         };
     };
+
+    type EventSpecs = Record<never, never>;
 
     type _Self<U> = {
         readonly options: Get<Options<U>>;
